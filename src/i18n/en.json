@@ -1,0 +1,215 @@
+{
+  "intro": {
+    "loading": "LOADING",
+    "title": "PORTFOLIO",
+    "year": "2026",
+    "role": "■ FULL STACK DEVELOPER",
+    "start": "START",
+    "options": "OPTIONS",
+    "contact": "CONTACT",
+    "skip": "Skip",
+    "language": "Language",
+    "theme": "Theme",
+    "themeDark": "Dark",
+    "themeLight": "Light"
+  },
+  "nav": {
+    "inicio": "Home",
+    "sobre": "About",
+    "sites": "Websites",
+    "projetos": "Projects",
+    "stack": "Stack",
+    "servicos": "Services",
+    "processo": "Process",
+    "contato": "Contact",
+    "cta": "Get a quote",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "themeToggle": "Toggle theme"
+  },
+  "hero": {
+    "hud": "// FULL STACK DEVELOPER · SÃO LUÍS – BRAZIL",
+    "name": "Arthur Moreira",
+    "subtitle": "I build websites and systems from scratch — from the database to the interface your customer sees.",
+    "paragraph": "Information Systems student at IFMA, passionate about building websites, focused on full stack development: Java + Spring Boot on the back end and React on the front end.",
+    "ctaBudget": "Get a quote",
+    "ctaSites": "See my websites",
+    "photoAlt": "Photo of Arthur Moreira wearing a black shirt and white glasses over a blue gradient background"
+  },
+  "journey": {
+    "label": "01 / Journey",
+    "title": "My journey",
+    "sub": "From the first lines of console code to the first websites sold.",
+    "timeline": [
+      {
+        "date": "Apr/2025",
+        "title": "Starting at IFMA",
+        "text": "Beginning of the Information Systems degree at IFMA – Monte Castelo Campus."
+      },
+      {
+        "date": "2025–2026",
+        "title": "From console to web",
+        "text": "From C and Java in the console to Spring Boot APIs and React front ends."
+      },
+      {
+        "date": "2026",
+        "title": "Equatorial Hackathon (EQT Lab)",
+        "text": "Built Conecta Líderes with a team for the \"Future Leaders\" challenge."
+      },
+      {
+        "date": "Nov/2026",
+        "title": "First website sold",
+        "text": "First website built and delivered to a real client."
+      },
+      {
+        "date": "Today",
+        "title": "4th semester",
+        "text": "Looking for a first internship and new website projects."
+      }
+    ],
+    "goalsTitle": "Where I'm heading",
+    "goalsText": "A full stack development internship and websites that help real businesses sell more.",
+    "eventTitle": "EQT Lab Hackathon",
+    "eventText": "Equatorial Energia's \"Future Leaders\" challenge: our team created Conecta Líderes, a platform for training community leaders.",
+    "eventLink": "See Conecta Líderes",
+    "eventAlt": "EQT Lab Hackathon team together at the event"
+  },
+  "sites": {
+    "label": "02 / Websites",
+    "title": "Websites built from scratch",
+    "sub": "Websites created from zero for real businesses. Click and see them running.",
+    "watch": "Watch it run",
+    "visit": "Visit website",
+    "videoSoon": "Video coming soon",
+    "linkSoon": "Link coming soon",
+    "closeVideo": "Close video",
+    "items": {
+      "tripverse": {
+        "name": "TripVerse",
+        "niche": "Travel agency",
+        "highlight": "Video hero and a gallery with destination previews."
+      },
+      "barbearia": {
+        "name": "Barbearia do Porto",
+        "niche": "Barbershop & bar",
+        "highlight": "7-step booking flow that lands straight on WhatsApp."
+      },
+      "fitzone": {
+        "name": "FitZone",
+        "niche": "Gym",
+        "highlight": "Plans, classes and space booking."
+      }
+    }
+  },
+  "projects": {
+    "label": "03 / Projects",
+    "title": "Development projects",
+    "sub": "Systems and APIs that show the engineering path: versioning, tests and architecture.",
+    "github": "View on GitHub",
+    "live": "See it live",
+    "wip": "in development",
+    "all": "See all projects on GitHub",
+    "fitzoneVersions": "Evolution across 6 versions",
+    "items": {
+      "fitzone": {
+        "name": "FitZone",
+        "desc": "Gym management system that evolved through 6 versions: from console OOP to a Spring Boot API + React front end, with 29 tests and CI."
+      },
+      "conecta": {
+        "name": "Conecta Líderes",
+        "desc": "Platform built with a team at the EQT Lab Hackathon: Next.js, TypeScript, PostgreSQL and AI."
+      },
+      "imobiliaria": {
+        "name": "Real Estate API",
+        "desc": "REST API for a real estate agency with Spring Security authentication."
+      }
+    }
+  },
+  "stack": {
+    "label": "04 / Stack",
+    "title": "My stack",
+    "sub": "The technologies I use, grouped by role.",
+    "front": "Front end",
+    "back": "Back end",
+    "db": "Database",
+    "tools": "Tools"
+  },
+  "services": {
+    "label": "05 / Services",
+    "title": "What I can build for you",
+    "sub": "From a one-page site to a full system — all built from scratch, tailored to you.",
+    "cta": "Get a quote",
+    "extras": "Extras: monthly maintenance · AI-enhanced product photos · Instagram management",
+    "items": [
+      {
+        "num": "01",
+        "title": "Landing page",
+        "desc": "A single page focused on selling one product or service.",
+        "topics": ["Fully conversion-focused", "Ready in a few days", "Button straight to WhatsApp"],
+        "wa": "Hi, Arthur! I saw your portfolio and I'd like a quote for a landing page."
+      },
+      {
+        "num": "02",
+        "title": "Business website",
+        "desc": "Your business's complete presence on the internet.",
+        "topics": ["Multiple pages and sections", "Exclusive brand design", "Ready for Google"],
+        "wa": "Hi, Arthur! I saw your portfolio and I'd like a quote for a business website."
+      },
+      {
+        "num": "03",
+        "title": "Booking or orders",
+        "desc": "Reservations, schedules or orders that land straight on your WhatsApp.",
+        "topics": ["Step-by-step flow", "No fee per order", "Works on any phone"],
+        "wa": "Hi, Arthur! I saw your portfolio and I'd like a quote for a website with booking/orders."
+      },
+      {
+        "num": "04",
+        "title": "Web systems",
+        "desc": "Custom dashboards and systems with Java, Spring Boot and React.",
+        "topics": ["Login and permissions", "A real database", "Reports and dashboards"],
+        "wa": "Hi, Arthur! I saw your portfolio and I'd like a quote for a web system."
+      }
+    ]
+  },
+  "sell": {
+    "label": "06 / Why me",
+    "title": "Not just pretty. Built to sell.",
+    "qualityTitle": "Quality",
+    "quality": [
+      { "title": "Exclusive design", "text": "No templates: the website looks like your business." },
+      { "title": "Mobile first", "text": "That's where your customer is — the site is born perfect on small screens." },
+      { "title": "Fast loading", "text": "A light website that opens before the customer gives up." },
+      { "title": "Orders straight to WhatsApp", "text": "A visitor becomes a conversation in one tap." }
+    ],
+    "workTitle": "How I work",
+    "work": [
+      { "title": "Built from scratch", "text": "No ready-made template, no site builder." },
+      { "title": "Real code", "text": "The same code as a professional system." },
+      { "title": "Support after delivery", "text": "You're not left alone after the site goes live." },
+      { "title": "Direct communication", "text": "You talk to me, from the first hi to delivery." }
+    ]
+  },
+  "process": {
+    "label": "07 / Process",
+    "title": "From the first hi to the site live",
+    "sub": "A simple, transparent path with no surprises along the way.",
+    "steps": [
+      { "title": "Conversation", "text": "I get to know your business and what the website needs to do." },
+      { "title": "Proposal", "text": "Fixed price and agreed scope." },
+      { "title": "Design & development", "text": "The site being built, with previews for you to follow." },
+      { "title": "Adjustments", "text": "We review it together until it feels right." },
+      { "title": "Site live", "text": "Published with your own domain." },
+      { "title": "Maintenance (optional)", "text": "Monthly updates to keep the site fresh." }
+    ]
+  },
+  "contact": {
+    "label": "08 / Contact",
+    "title": "Shall we build your website from scratch?",
+    "sub": "Message me on WhatsApp and tell me about your business. I reply fast.",
+    "cta": "Message on WhatsApp",
+    "wa": "Hi, Arthur! I saw your portfolio and I'd like to talk about a project.",
+    "slogan": "Websites and systems from scratch, from database to interface.",
+    "rights": "© 2026 Arthur Moreira. All rights reserved.",
+    "floatLabel": "Message on WhatsApp"
+  }
+}

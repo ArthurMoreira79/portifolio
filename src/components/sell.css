@@ -1,0 +1,50 @@
+.sell-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.sell-col {
+  padding: 30px 32px;
+}
+
+.sell-col h3 {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent);
+  margin-bottom: 22px;
+}
+
+.sell-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 24px;
+}
+
+.sell-item strong {
+  display: block;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.sell-item p {
+  color: var(--text-2);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 900px) {
+  .sell-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .sell-items {
+    grid-template-columns: 1fr;
+  }
+}

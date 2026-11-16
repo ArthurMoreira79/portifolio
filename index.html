@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arthur Moreira — Desenvolvedor Full Stack</title>
+    <meta
+      name="description"
+      content="Crio sites e sistemas do zero, do banco de dados à interface. Desenvolvedor full stack em São Luís – MA: Java, Spring Boot e React."
+    />
+    <meta property="og:title" content="Arthur Moreira — Desenvolvedor Full Stack" />
+    <meta
+      property="og:description"
+      content="Sites e sistemas do zero, do banco de dados à interface que o seu cliente vê."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.jpg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Aplica tema salvo antes do primeiro paint (evita flash)
+      try {
+        var t = localStorage.getItem('theme')
+        if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+        document.documentElement.setAttribute('data-theme', t)
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

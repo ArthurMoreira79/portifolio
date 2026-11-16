@@ -1,0 +1,72 @@
+.proc-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 720px;
+  margin-inline: auto;
+  padding-left: 56px;
+}
+
+.proc-line {
+  position: absolute;
+  left: 19px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: var(--border);
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.proc-line-fill {
+  width: 100%;
+  height: 100%;
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent);
+  transform: scaleY(0);
+  transform-origin: top;
+}
+
+.proc-step {
+  position: relative;
+}
+
+.proc-num {
+  position: absolute;
+  left: -56px;
+  top: 18px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--bg);
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.proc-step-body {
+  padding: 20px 26px;
+  transition: border-color 200ms ease, transform 200ms ease;
+}
+
+.proc-step-body:hover {
+  border-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  transform: translateX(4px);
+}
+
+.proc-step-body h3 {
+  font-family: var(--font-head);
+  font-size: 1.08rem;
+  margin-bottom: 4px;
+}
+
+.proc-step-body p {
+  color: var(--text-2);
+  font-size: 0.94rem;
+}

@@ -1,0 +1,215 @@
+{
+  "intro": {
+    "loading": "CARREGANDO",
+    "title": "PORTFÓLIO",
+    "year": "2026",
+    "role": "■ DESENVOLVEDOR FULL STACK",
+    "start": "INICIAR",
+    "options": "OPÇÕES",
+    "contact": "CONTATO",
+    "skip": "Pular",
+    "language": "Idioma",
+    "theme": "Tema",
+    "themeDark": "Escuro",
+    "themeLight": "Claro"
+  },
+  "nav": {
+    "inicio": "Início",
+    "sobre": "Sobre",
+    "sites": "Sites",
+    "projetos": "Projetos",
+    "stack": "Stack",
+    "servicos": "Serviços",
+    "processo": "Processo",
+    "contato": "Contato",
+    "cta": "Pedir orçamento",
+    "openMenu": "Abrir menu",
+    "closeMenu": "Fechar menu",
+    "themeToggle": "Alternar tema"
+  },
+  "hero": {
+    "hud": "// DESENVOLVEDOR FULL STACK · SÃO LUÍS – MA",
+    "name": "Arthur Moreira",
+    "subtitle": "Crio sites e sistemas do zero, do banco de dados à interface que o seu cliente vê.",
+    "paragraph": "Estudante de Sistemas de Informação no IFMA, apaixonado por criação de sites, com foco em desenvolvimento full stack: Java + Spring Boot no back-end e React no front-end.",
+    "ctaBudget": "Pedir orçamento",
+    "ctaSites": "Ver meus sites",
+    "photoAlt": "Foto de Arthur Moreira, de camisa preta e óculos branco, sobre fundo em degradê azul"
+  },
+  "journey": {
+    "label": "01 / Trajetória",
+    "title": "Minha trajetória",
+    "sub": "Do primeiro código no console aos primeiros sites vendidos.",
+    "timeline": [
+      {
+        "date": "Abr/2025",
+        "title": "Início no IFMA",
+        "text": "Começo do curso de Sistemas de Informação no IFMA – Campus Monte Castelo."
+      },
+      {
+        "date": "2025–2026",
+        "title": "Do console à web",
+        "text": "De C e Java no console até APIs com Spring Boot e front-ends em React."
+      },
+      {
+        "date": "2026",
+        "title": "Hackathon Equatorial (EQT Lab)",
+        "text": "Desenvolvimento do Conecta Líderes em equipe, no desafio Futuro Líderes."
+      },
+      {
+        "date": "Nov/2026",
+        "title": "Primeiro site vendido",
+        "text": "Primeiro site criado e entregue para um cliente real."
+      },
+      {
+        "date": "Hoje",
+        "title": "4º período",
+        "text": "Buscando o primeiro estágio e novos projetos de sites."
+      }
+    ],
+    "goalsTitle": "Para onde estou indo",
+    "goalsText": "Estágio em desenvolvimento full stack e sites que ajudam negócios reais a vender mais.",
+    "eventTitle": "Hackathon EQT Lab",
+    "eventText": "Desafio \"Futuro Líderes\" da Equatorial Energia: nossa equipe criou o Conecta Líderes, uma plataforma de formação de líderes comunitários.",
+    "eventLink": "Ver o Conecta Líderes",
+    "eventAlt": "Equipe do Hackathon EQT Lab reunida no evento"
+  },
+  "sites": {
+    "label": "02 / Sites",
+    "title": "Sites que saíram do zero",
+    "sub": "Sites criados do zero para negócios. Clique e veja funcionando.",
+    "watch": "Ver rodando",
+    "visit": "Acessar site",
+    "videoSoon": "Vídeo em breve",
+    "linkSoon": "Link em breve",
+    "closeVideo": "Fechar vídeo",
+    "items": {
+      "tripverse": {
+        "name": "TripVerse",
+        "niche": "Agência de viagens",
+        "highlight": "Hero em vídeo e galeria com prévias de destinos."
+      },
+      "barbearia": {
+        "name": "Barbearia do Porto",
+        "niche": "Barbearia & bar",
+        "highlight": "Agendamento em 7 passos que cai direto no WhatsApp."
+      },
+      "fitzone": {
+        "name": "FitZone",
+        "niche": "Academia",
+        "highlight": "Planos, aulas e reserva de espaços."
+      }
+    }
+  },
+  "projects": {
+    "label": "03 / Projetos",
+    "title": "Projetos de desenvolvimento",
+    "sub": "Sistemas e APIs que mostram o caminho do código: versionamento, testes e arquitetura.",
+    "github": "Ver no GitHub",
+    "live": "Ver no ar",
+    "wip": "em desenvolvimento",
+    "all": "Ver todos os projetos no GitHub",
+    "fitzoneVersions": "Evolução em 6 versões",
+    "items": {
+      "fitzone": {
+        "name": "FitZone",
+        "desc": "Sistema de gestão de academia que evoluiu em 6 versões: de POO no console até API Spring Boot + front-end React, com 29 testes e CI."
+      },
+      "conecta": {
+        "name": "Conecta Líderes",
+        "desc": "Plataforma criada em equipe no Hackathon EQT Lab: Next.js, TypeScript, PostgreSQL e IA."
+      },
+      "imobiliaria": {
+        "name": "Imobiliária API",
+        "desc": "API REST de imobiliária com autenticação via Spring Security."
+      }
+    }
+  },
+  "stack": {
+    "label": "04 / Stack",
+    "title": "Minha stack",
+    "sub": "As tecnologias que eu uso, divididas por função.",
+    "front": "Front-end",
+    "back": "Back-end",
+    "db": "Banco de dados",
+    "tools": "Ferramentas"
+  },
+  "services": {
+    "label": "05 / Serviços",
+    "title": "O que eu posso construir pra você",
+    "sub": "Do site de uma página ao sistema completo — tudo feito do zero, sob medida.",
+    "cta": "Quero orçamento",
+    "extras": "Extras: manutenção mensal · fotos de produto tratadas com IA · gestão de Instagram",
+    "items": [
+      {
+        "num": "01",
+        "title": "Landing page",
+        "desc": "Uma página focada em vender um produto ou serviço.",
+        "topics": ["Foco total em conversão", "Pronta em poucos dias", "Botão direto pro WhatsApp"],
+        "wa": "Olá, Arthur! Vi seu portfólio e quero um orçamento de uma landing page."
+      },
+      {
+        "num": "02",
+        "title": "Site institucional",
+        "desc": "A presença completa do seu negócio na internet.",
+        "topics": ["Várias páginas e seções", "Design exclusivo da marca", "Pronto para o Google"],
+        "wa": "Olá, Arthur! Vi seu portfólio e quero um orçamento de um site institucional."
+      },
+      {
+        "num": "03",
+        "title": "Agendamento ou pedidos",
+        "desc": "Reservas, horários ou pedidos que chegam direto no seu WhatsApp.",
+        "topics": ["Fluxo passo a passo", "Sem taxa por pedido", "Funciona em qualquer celular"],
+        "wa": "Olá, Arthur! Vi seu portfólio e quero um orçamento de um site com agendamento/pedidos."
+      },
+      {
+        "num": "04",
+        "title": "Sistemas web",
+        "desc": "Painéis e sistemas sob medida com Java, Spring Boot e React.",
+        "topics": ["Login e permissões", "Banco de dados de verdade", "Relatórios e painéis"],
+        "wa": "Olá, Arthur! Vi seu portfólio e quero um orçamento de um sistema web."
+      }
+    ]
+  },
+  "sell": {
+    "label": "06 / Diferenciais",
+    "title": "Não é só bonito. É feito pra vender.",
+    "qualityTitle": "Qualidade",
+    "quality": [
+      { "title": "Design exclusivo", "text": "Nada de template: o site tem a cara do seu negócio." },
+      { "title": "Feito para celular primeiro", "text": "É onde seu cliente está — o site nasce perfeito na tela pequena." },
+      { "title": "Carregamento rápido", "text": "Site leve, que abre antes do cliente desistir." },
+      { "title": "Pedido direto no WhatsApp", "text": "O visitante vira conversa com um toque." }
+    ],
+    "workTitle": "Como eu trabalho",
+    "work": [
+      { "title": "Feito do zero", "text": "Sem template pronto, sem construtor de site." },
+      { "title": "Código de verdade", "text": "O mesmo código de um sistema profissional." },
+      { "title": "Suporte depois de entregar", "text": "Você não fica na mão depois do site no ar." },
+      { "title": "Comunicação direta", "text": "Você fala comigo, do primeiro oi à entrega." }
+    ]
+  },
+  "process": {
+    "label": "07 / Processo",
+    "title": "Do primeiro oi ao site no ar",
+    "sub": "Um caminho simples e transparente, sem surpresa no meio.",
+    "steps": [
+      { "title": "Conversa", "text": "Entendo o seu negócio e o que o site precisa fazer." },
+      { "title": "Proposta", "text": "Valor fechado e escopo combinado." },
+      { "title": "Design e desenvolvimento", "text": "O site sendo construído, com prévias para você acompanhar." },
+      { "title": "Ajustes", "text": "Revisamos juntos até ficar do seu jeito." },
+      { "title": "Site no ar", "text": "Publicação com o seu domínio." },
+      { "title": "Manutenção (opcional)", "text": "Atualizações mensais para o site continuar em dia." }
+    ]
+  },
+  "contact": {
+    "label": "08 / Contato",
+    "title": "Vamos tirar o seu site do zero?",
+    "sub": "Me chama no WhatsApp e me conta sobre o seu negócio. Eu respondo rápido.",
+    "cta": "Chamar no WhatsApp",
+    "wa": "Olá, Arthur! Vi seu portfólio e quero conversar sobre um projeto.",
+    "slogan": "Sites e sistemas do zero, do banco à interface.",
+    "rights": "© 2026 Arthur Moreira. Todos os direitos reservados.",
+    "floatLabel": "Chamar no WhatsApp"
+  }
+}
