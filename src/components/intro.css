@@ -158,11 +158,13 @@
   filter: blur(2px);
 }
 
-.intro-photo-svg {
+.intro-photo-img {
   position: relative;
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 16px 50px rgba(0, 0, 0, 0.5));
+  border-radius: 18px;
+  border: 1px solid rgba(143, 227, 240, 0.4);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.5);
 }
 
 .intro-title-text {
@@ -203,96 +205,6 @@
   color: var(--mist-500);
 }
 
-.intro-menu {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  margin-top: clamp(8px, 2vh, 20px);
-}
-
-.intro-menu li {
-  position: relative;
-}
-
-.intro-menu li > button {
-  font-family: var(--font-head);
-  font-weight: 600;
-  font-size: clamp(1.25rem, 3vw, 1.8rem);
-  letter-spacing: 0.22em;
-  color: var(--frame);
-  padding: 8px 14px 8px 36px;
-  position: relative;
-  transition: color 160ms ease;
-}
-
-.intro-menu li > button::before {
-  content: '▸';
-  position: absolute;
-  left: 8px;
-  opacity: 0;
-  transform: translateX(-6px);
-  transition: all 160ms ease;
-  color: var(--glow);
-}
-
-.intro-menu li > button:hover,
-.intro-menu li > button:focus-visible {
-  color: var(--glow);
-  outline: none;
-}
-
-.intro-menu li > button:hover::before,
-.intro-menu li > button:focus-visible::before {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.intro-options {
-  position: absolute;
-  left: 40px;
-  top: 100%;
-  z-index: 5;
-  padding: 16px 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  min-width: 250px;
-  background: rgba(12, 20, 27, 0.92);
-}
-
-.intro-opt-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  color: var(--mist-500);
-}
-
-.intro-opt-row > div {
-  display: flex;
-  gap: 6px;
-}
-
-.intro-opt-row button {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  padding: 5px 12px;
-  border: 1px solid rgba(150, 176, 178, 0.3);
-  border-radius: 999px;
-  color: var(--mist-300);
-  transition: all 150ms ease;
-}
-
-.intro-opt-row button.on,
-.intro-opt-row button:hover {
-  border-color: var(--glow);
-  color: var(--glow);
-}
-
 @media (max-width: 720px) {
   .intro-title-grid {
     grid-template-columns: 1fr;
@@ -307,14 +219,5 @@
 
   .intro-title {
     justify-content: center;
-  }
-
-  .intro-menu {
-    align-items: center;
-  }
-
-  .intro-options {
-    left: 50%;
-    transform: translateX(-50%);
   }
 }

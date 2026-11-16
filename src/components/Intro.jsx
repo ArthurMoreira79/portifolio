@@ -1,22 +1,18 @@
 import { useEffect, useRef, useState } from 'react'
-import { gsap, scrollToId } from '../lib/animations.js'
+import { gsap } from '../lib/animations.js'
 import { useI18n } from '../i18n/I18nContext.jsx'
-import { useTheme } from '../lib/ThemeContext.jsx'
 import Logo from './Logo.jsx'
 import perfil from '../assets/perfil.jpg'
 import './intro.css'
 
 export default function Intro({ onDone }) {
-  const { t, lang, setLang } = useI18n()
-  const { theme, setTheme } = useTheme()
+  const { t } = useI18n()
   const [phase, setPhase] = useState('loading') // loading | title
   const [progress, setProgress] = useState(0)
   const [glitch, setGlitch] = useState(false)
-  const [optionsOpen, setOptionsOpen] = useState(false)
   const rootRef = useRef(null)
   const loaderRef = useRef(null)
   const titleRef = useRef(null)
-  const menuRefs = useRef([])
   const leaving = useRef(false)
 
   /* ---- Etapa A: carregamento real (min 1,2s / max 3s) ---- */
@@ -83,7 +79,20 @@ export default function Intro({ onDone }) {
     return () => ctx.revert()
   }, [])
 
-  /* ---- Etapa B: montagem da tela de título ---- */
+  /* ---- Saída: zoom + fade (o mesmo efeito do antigo INICIAR) ---- */
+  const exit = () => {
+    if (leaving.current) return
+    leaving.current = true
+    gsap.to(rootRef.current, {
+      scale: 1.12,
+      opacity: 0,
+      duration: 0.7,
+      ease: 'power2.in',
+      onComplete: onDone,
+    })
+  }
+
+  /* ---- Etapa B: tela de título monta e entra sozinha no site ---- */
   useEffect(() => {
     if (phase !== 'title') return
     const root = titleRef.current
@@ -104,63 +113,22 @@ export default function Intro({ onDone }) {
         )
         .fromTo('.intro-year', { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.5 }, '-=0.3')
         .fromTo('.intro-role', { opacity: 0 }, { opacity: 1, duration: 0.15, repeat: 2, yoyo: true }, '-=0.2')
-        .fromTo(
-          '.intro-menu li',
-          { opacity: 0, y: 18 },
-          { opacity: 1, y: 0, duration: 0.5, stagger: 0.09, ease: 'power2.out' },
-          '-=0.1',
-        )
-        .fromTo('.intro-skip', { opacity: 0 }, { opacity: 0.7, duration: 0.4 })
+        .fromTo('.intro-skip', { opacity: 0 }, { opacity: 0.7, duration: 0.4 }, '<')
+        /* entrada automática, como se INICIAR tivesse sido clicado */
+        .call(exit, null, '+=0.9')
     }, root)
 
-    const focusTimer = setTimeout(() => menuRefs.current[0]?.focus(), 1400)
-    return () => {
-      clearTimeout(focusTimer)
-      ctx.revert()
-    }
+    return () => ctx.revert()
   }, [phase])
 
-  /* ---- Navegação por teclado (estilo menu de jogo) ---- */
+  /* Enter/Espaço/Esc pulam direto */
   useEffect(() => {
-    if (phase !== 'title') return
     const onKey = (e) => {
-      const items = menuRefs.current.filter(Boolean)
-      const idx = items.indexOf(document.activeElement)
-      if (['ArrowDown', 'ArrowRight'].includes(e.key)) {
-        e.preventDefault()
-        items[(idx + 1 + items.length) % items.length]?.focus()
-      } else if (['ArrowUp', 'ArrowLeft'].includes(e.key)) {
-        e.preventDefault()
-        items[(idx - 1 + items.length) % items.length]?.focus()
-      } else if (e.key === 'Enter' && idx === -1) {
-        e.preventDefault()
-        start()
-      } else if (e.key === 'Escape') {
-        setOptionsOpen(false)
-      }
+      if (['Enter', ' ', 'Escape'].includes(e.key)) exit()
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [phase])
-
-  /* ---- Saída: zoom + fade ---- */
-  const exit = (after) => {
-    if (leaving.current) return
-    leaving.current = true
-    gsap.to(rootRef.current, {
-      scale: 1.12,
-      opacity: 0,
-      duration: 0.7,
-      ease: 'power2.in',
-      onComplete: () => {
-        onDone()
-        after?.()
-      },
-    })
-  }
-
-  const start = () => exit()
-  const goContact = () => exit(() => setTimeout(() => scrollToId('contato'), 120))
+  }, [])
 
   return (
     <div className="intro" ref={rootRef} role="dialog" aria-label={t.intro.title}>
@@ -185,37 +153,14 @@ export default function Intro({ onDone }) {
             <Logo />
           </div>
 
-          <button className="intro-skip" onClick={start}>
+          <button className="intro-skip" onClick={exit}>
             {t.intro.skip} →
           </button>
 
           <div className="intro-title-grid">
             <div className="intro-photo" aria-hidden="true">
               <div className="intro-photo-block" />
-              <svg viewBox="0 0 400 500" className="intro-photo-svg">
-                <defs>
-                  <clipPath id="introLetter" clipPathUnits="userSpaceOnUse">
-                    <path d="M200 14 L372 486 L28 486 Z" />
-                  </clipPath>
-                </defs>
-                <g clipPath="url(#introLetter)">
-                  <image
-                    href={perfil}
-                    x="-20"
-                    y="0"
-                    width="440"
-                    height="520"
-                    preserveAspectRatio="xMidYMid slice"
-                  />
-                </g>
-                <path
-                  d="M200 14 L372 486 L28 486 Z"
-                  fill="none"
-                  stroke="var(--glow)"
-                  strokeWidth="2"
-                  opacity="0.55"
-                />
-              </svg>
+              <img className="intro-photo-img" src={perfil} alt="" />
             </div>
 
             <div className="intro-title-text">
@@ -228,66 +173,6 @@ export default function Intro({ onDone }) {
                 <span className="intro-year">{t.intro.year}</span>
               </h1>
               <p className="intro-role">{t.intro.role}</p>
-
-              <ul className="intro-menu">
-                <li>
-                  <button ref={(el) => (menuRefs.current[0] = el)} onClick={start}>
-                    {t.intro.start}
-                  </button>
-                </li>
-                <li>
-                  <button
-                    ref={(el) => (menuRefs.current[1] = el)}
-                    onClick={() => setOptionsOpen((o) => !o)}
-                    aria-expanded={optionsOpen}
-                  >
-                    {t.intro.options}
-                  </button>
-                  {optionsOpen && (
-                    <div className="intro-options glass">
-                      <div className="intro-opt-row">
-                        <span>{t.intro.language}</span>
-                        <div>
-                          <button
-                            className={lang === 'pt' ? 'on' : ''}
-                            onClick={() => setLang('pt')}
-                          >
-                            PT
-                          </button>
-                          <button
-                            className={lang === 'en' ? 'on' : ''}
-                            onClick={() => setLang('en')}
-                          >
-                            EN
-                          </button>
-                        </div>
-                      </div>
-                      <div className="intro-opt-row">
-                        <span>{t.intro.theme}</span>
-                        <div>
-                          <button
-                            className={theme === 'dark' ? 'on' : ''}
-                            onClick={() => setTheme('dark')}
-                          >
-                            {t.intro.themeDark}
-                          </button>
-                          <button
-                            className={theme === 'light' ? 'on' : ''}
-                            onClick={() => setTheme('light')}
-                          >
-                            {t.intro.themeLight}
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                </li>
-                <li>
-                  <button ref={(el) => (menuRefs.current[2] = el)} onClick={goContact}>
-                    {t.intro.contact}
-                  </button>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
