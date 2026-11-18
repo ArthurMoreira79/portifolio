@@ -173,6 +173,7 @@
 
   .proj-card.featured .proj-visual {
     width: 100%;
-    aspect-ratio: 16 / 7;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
   }
 }
